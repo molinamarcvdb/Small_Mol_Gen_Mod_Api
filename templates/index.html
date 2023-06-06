@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Compound Generative modelling</title>
+    <meta property="og:title" content="Soft UI Pro" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style>
+      .my-div {
+        background-image: url('/static/public/playground_assets/Molecule-Graph_0.jpg');
+        background-size: cover;
+        /* other CSS styles for the div */
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Open Sans;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.625;
+        color: var(--dl-color-secondary-400);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+      html * {
+          -webkit-font-smoothing: antialiased;
+      }
+      input::placeholder, textarea::placeholder {
+         color: #d2d6da;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div>
+      <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet" />
+
+      <div class="home-container">
+        <div data-role="Header" class="header-header">
+          <nav class="header-nav">
+            <div class="header-container">
+              <a href="index.html" class="header-navlink Large">
+                <h1 class="home-text07 HeadingOne">
+                  AI in Drug Discovery - Generative molecular modelling
+                </h1>
+              </a>
+             
+              <div class="header-container1">
+                <div class="header-container2">
+                  <div class="primary-pink-button-container">
+                    <button
+                      class="primary-pink-button-button button ButtonSmall"
+                    >
+                      <span>Contact</span>
+                    </button>
+                  </div>
+                </div>
+                <div data-role="BurgerMenu" class="header-burger-menu">
+                  <svg viewBox="0 0 1024 1024" class="header-icon">
+                    <path
+                      d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div data-role="MobileMenu" class="header-mobile-menu">
+            <div class="header-top">
+              <a href="index.html" class="header-navlink4 Large">
+                AI in Drug Discovery
+              </a>
+              <div data-role="CloseMobileMenu" class="header-close-menu">
+                <svg viewBox="0 0 1024 1024" class="header-icon2">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            
+            <div class="header-bot">
+              <div class="primary-pink-button-container">
+                <button class="primary-pink-button-button button ButtonSmall">
+                  <span>buy now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-hero">
+          <div class="my-div">
+            <div class="home-container01">
+              <div class="home-card">
+                <h1 class="home-text HeadingOne">Hit Expansion</h1>
+                <h1 class="home-text02 HeadingOne">
+                  Molecular Language Model as Multi-task Generator
+                </h1>
+                <span class="home-text00">
+                  MolGen-large-opt is the fine-tuned version of MolGen-large. MolGen-large is the first pre-trained model that only produces chemically valid molecules. With a training corpus of over 100 million molecules in SELFIES representation, MolGen-large learns the intrinsic structural patterns of molecules by mapping corrupted SELFIES to their original forms. Specifically, MolGen-large employs a bidirectional Transformer as its encoder and an autoregressive Transformer as its decoder. Through its carefully designed multi-task molecular prefix tuning (MPT), MolGen-large-opt can generate molecules with desired properties, making it a valuable tool for molecular optimization.
+                </span>
+                <!-- <div class="home-container04">
+                  <input type="text" placeholder="placeholder" class="input" />
+                </div>
+                <button class="home-button button">Button</button> -->
+                <br>
+                <form action="/" method="post">
+                  <label for="smiles"><strong>Enter your SMILES sequence:</strong></label>
+                  <input type="text" id="smiles" name="smiles" required>
+                  <br>
+                  <label for="max_length"><strong>Maximum SELFIES length:</strong></label>
+                  <input type="number" id="max_length" name="max_length" min="5" max="100" required>
+                  <br>
+                  <label for="min_length"><strong>Minimum SELFIES length:</strong></label>
+                  <input type="number" id="min_length" name="min_length" min="5" max="100" required>
+                  <br>
+                  <label for="num_seq"><strong>Number of compounds:</strong></label>
+                  <input type="number" id="num_seq" name="num_seq" min="5" max="1000" required>
+                  <br>
+
+                  <strong>Select a saving method:</strong><br>
+                  <input type="radio" id="JSON" name="save-method" value="json" required>
+                  <label for="save-method-1">.json</label><br>
+                  
+                  <input type="radio" id="csv" name="save-method" value="csv">
+                  <label for="save-method-2">.csv</label><br>
+                  
+                  <input type="radio" id="Excel" name="save-method" value="excel">
+                  <label for="save-method-3">.xlsx</label><br>
+                  <!-- <button type="submit">Predict</button> -->
+                  <br>
+                  <br>
+                  <br>
+                  <div
+                  class="primary-pink-button-container primary-pink-button-root-class-name"
+                >
+                  <button class="primary-pink-button-button button ButtonSmall" type="submit">
+                    <span>Generate!</span>
+                  </button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          alt="image"
+          src="{{ url_for('static', filename='/public/playground_assets/DD.jpg') }}"
+          class="home-image"
+        />
+        <!-- <section class="home-features">
+          <div class="feature-card-container">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='/public/playground_assets/cube1.svg') }}"
+              class="feature-card-image"
+            />
+            <h5 class="feature-card-text HeadingThree"><span>Design</span></h5>
+            <span class="feature-card-text1">
+              <span>Choose the best design system for your next product.</span>
+            </span>
+          </div>
+          <div class="feature-card-container">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='/public/playground_assets/person1.svg') }}" 
+              class="feature-card-image"
+            />
+            <h5 class="feature-card-text HeadingThree"><span>Design</span></h5>
+            <span class="feature-card-text1">
+              <span>Get the latest design ideas and turn it into reality.</span>
+            </span>
+          </div>
+          <div class="feature-card-container">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='/public/playground_assets/rocket1.svg') }}" 
+              class="feature-card-image"
+            />
+            <h5 class="feature-card-text HeadingThree"><span>Design</span></h5>
+            <span class="feature-card-text1">
+              <span>Make your code easier to maintain using variables.</span>
+            </span>
+          </div>
+          <div class="feature-card-container">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='/public/playground_assets/rocket1.svg') }}" 
+              class="feature-card-image"
+            />
+            <h5 class="feature-card-text HeadingThree"><span>Design</span></h5>
+            <span class="feature-card-text1">
+              <span>This design system is fully supported on any device.</span>
+            </span>
+          </div>
+        </section> -->
+        <section class="home-testimonials">
+          <div class="home-container05">
+            <div class="home-container06">
+              <div class="home-container07">
+                <h2 class="home-text03 HeadingOne">Work with us</h2>
+                <p class="home-text04 Lead">
+                  <span class="home-text05">
+                    Whatever your qualification is - we got you!
+                  </span>
+                </p>
+                <p class="home-text06 Body">
+                  <span class="home-text07">
+                    Molecule generation with desired properties has
+                    grown immensely in popularity by disruptively
+                    changing the way scientists design molecular
+                    structures and providing support for chemical and
+                    materials design. However, despite the promising outcome, previous machine learning-based
+                    deep generative models suffer from a reliance on
+                    complex, task-specific fine-tuning, limited dimensional latent spaces, or the quality of expert rules.
+                    In this work, we propose MOLGEN, a pre-trained
+                    molecular language model that effectively learns
+                    and shares knowledge across multiple generation
+                    tasks and domains. Specifically, we pre-train
+                    MOLGEN with the chemical language SELFIES
+                    on more than 100 million unlabelled molecules.
+                    We further propose multi-task molecular prefix
+                    tuning across several molecular generation tasks
+                    and different molecular domains (synthetic &
+                    natural products) with a self-feedback mechanism. Extensive experiments show that MOLGEN
+                    can obtain superior performances on well-known
+                    molecular generation benchmark datasets. The
+                    further analysis illustrates that MOLGEN can accurately capture the distribution of molecules, implicitly learn their structural characteristics, and
+                    efficiently explore the chemical space with the
+                    guidance of multi-task molecular prefix tuning
+                  </span>
+                </p>
+                <p class="home-text08">Mark Jojansen</p>
+                <p class="home-text09 Small">Project manager, Atlassian</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="home-logos">
+            <img
+              alt="image"
+              src="{{ url_for('static', filename='/public/playground_assets/molgen.png') }}"
+              class="home-image">
+          </div> -->
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='/public/playground_assets/bottom.svg') }}" 
+            class="home-bottom-wave-image"
+          />
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='/public/playground_assets/waves-white.svg') }}" 
+            class="home-image12"
+          />
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='/public/playground_assets/top.svg') }}" 
+            class="home-top-wave-image"
+          />
+        </section>
+        <footer class="footer-footer">
+          <div class="footer-container">
+            <div class="footer-container1">
+              <span class="footer-text">SOFT</span>
+              <span>Copyright © 2021 Soft by Creative Tim.</span>
+            </div>
+            <div class="footer-container2">
+              <div class="footer-container3">
+                <span class="footer-text02 Large">Company</span>
+                <span class="footer-text03 Large">About Us</span>
+                <span class="footer-text04 Large">Careers</span>
+                <span class="footer-text05 Large">Press</span>
+              </div>
+              <div class="footer-container4">
+                <span class="footer-text06 Large">Pages</span>
+                <span class="footer-text07 Large">Login</span>
+                <span class="footer-text08 Large">Register</span>
+                <span class="footer-text09 Large">About</span>
+              </div>
+              <div class="footer-container5">
+                <span class="footer-text10 Large">Products</span>
+                <span class="footer-text11 Large">Free</span>
+                <span class="footer-text12 Large">PRO</span>
+                <span class="footer-text13 Large">Latest</span>
+              </div>
+            </div>
+          </div>
+          <img
+            alt="image"
+            src="{{ url_for('static', filename='/public/playground_assets/waves-white.svg') }}" 
+            class="footer-image"
+          />
+        </footer>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>

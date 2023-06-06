@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Predictor</title>
+  </head>
+  <body>
+    <h1>Compound Predictor</h1>
+    <form action="{{ url_for('predict_page') }}" method="post">
+      <label for="smiles">Enter a SMILES sequence:</label>
+      <input type="text" id="smiles" name="smiles">
+      <button type="submit">Predict</button>
+    </form>
+  </body>
+</html>

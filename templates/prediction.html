@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction Results</title>
+  </head>
+  <body>
+    <h1>Prediction Results</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Compound Characteristic</th>
+          <th>Predicted Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Molecular Weight</td>
+          <td>{{ prediction['MolecularWeight'] }}</td>
+        </tr>
+        <tr>
+          <td>XLogP</td>
+          <td>{{ prediction['XLogP'] }}</td>
+        </tr>
+        <tr>
+          <td>Exact Mass</td>
+          <td>{{ prediction['ExactMass'] }}</td>
+        </tr>
+        <tr>
+          <td>TPSA</td>
+          <td>{{ prediction['TPSA'] }}</td>
+        </tr>
+        <tr>
+          <td>Complexity</td>
+          <td>{{ prediction['Complexity'] }}</td>
+        </tr>
+        <tr>
+          <td>Charge</td>
+          <td>{{ prediction['Charge'] }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="{{ url_for('home') }}">Predict another compound</a>
+  </body>
+</html>
