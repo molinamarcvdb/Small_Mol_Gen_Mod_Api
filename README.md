@@ -11,10 +11,21 @@ Recognizing the challenge in comparing and ranking different generative models, 
 
 The API facilitates easy integration of our generative modelling tool into existing workflows and applications, accelerating the process of molecular discovery and design.
 ## Usage
-```javascript I'm A tab
-console.log('Code Tab A');
+
+1. Clone repository
 ```
+git clone git@github.com:molinamarcvdb/Small_Mol_Gen_Mod_Api.git
+```
+2. Install dependencies
+```
+python -m pip install requirements.txt
+```
+
+## References
+
 [1] Krenn, M., Häse, F., Nigam, A., Friederich, P., & Aspuru-Guzik, A. (2020). Self-Referencing Embedded Strings (SELFIES): A 100% robust molecular string representation. Machine Learning: Science and Technology, 1(4), 045024. https://doi.org/10.1088/2632-2153/aba947
+
 [2] Fang, Y., Zhang, N., Chen, Z., Fan, X., & Chen, H. (2023, May 18). Domain-Agnostic Molecular Generation with Self-feedback. ArXiv.org. https://doi.org/10.48550/arXiv.2301.11259
+
 [3] Polykovskiy, D., Zhebrak, A., Sanchez-Lengeling, B., Golovanov, S., Tatanov, O., Belyaev, S., Kurbanov, R., Artamonov, A., Aladinskiy, V., Veselov, M., Kadurin, A., Johansson, S., Chen, H., Nikolenko, S., Aspuru-Guzik, A., & Zhavoronkov, A. (2020). Molecular Sets (MOSES): A Benchmarking Platform for Molecular Generation Models. Frontiers in Pharmacology, 11. https://doi.org/10.3389/fphar.2020.565644
 
