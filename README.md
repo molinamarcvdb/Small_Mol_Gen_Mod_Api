@@ -18,7 +18,7 @@ git clone git@github.com:molinamarcvdb/Small_Mol_Gen_Mod_Api.git
 ```
 2. Install dependencies
 ```
-python -m pip install requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## References
