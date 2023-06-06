@@ -26,6 +26,7 @@ python -m pip install -r requirements.txt
 ```
 python webapp.py
 ```
+![Alt text](ezgif.com-video-to-gif.gif)
 
 ## References
 
