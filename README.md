@@ -20,6 +20,10 @@ git clone git@github.com:molinamarcvdb/Small_Mol_Gen_Mod_Api.git
 ```
 python -m pip install -r requirements.txt
 ```
+3. Download molecule properties prediction model available at the link and add it to the project directory.
+``` 
+https://googledrive.com/host/1c70OuDjbLj87ohl9ue1isBbXl-dQzExH/model.joblib
+```
 
 ## References
 
