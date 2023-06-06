@@ -5,9 +5,9 @@ This repository contains the source code for our Small Molecule Targeted Generat
 ## Introduction
 The exploration and generation of novel molecular structures is a critical aspect of drug discovery and related fields. Traditional methods can be time-consuming and expensive, making the use of computational models increasingly attractive. Our API utilizes a generative model approach, learning from a large dataset of molecular structures expressed in the SELFIES language - a 100% robust molecular string representation developed in [1].
 
-The generative model employed here has been trained to produce molecular structures with properties similar to those in the training dataset. This opens the possibility for usage in virtual screening tasks or for training semi-supervised predictive models in downstream tasks.
+The generative model employed here wasd eveloped in [2] and is available through the HuggingFace infrastructure. The authors developed a Molecular language model as a multi task generator and is capable of producing molecular structures with properties similar to those of the given hit. 
 
-Recognizing the challenge in comparing and ranking different generative models, we've integrated the Molecular Sets (MOSES) benchmarking platform developed by Polykovskiy et al. (2020). MOSES provides training and testing datasets, along with a comprehensive set of metrics to evaluate the quality and diversity of generated structures. By integrating MOSES, we aim to provide a robust, standardized, and high-quality generative modelling tool for the scientific community.
+Recognizing the challenge in comparing and ranking different generative models, we externally validated the large language model with the Molecular Sets (MOSES) benchmarking platform developed in [3]. MOSES provides training and testing datasets, along with a comprehensive set of metrics to evaluate the quality and diversity of generated structures. 
 
 The API facilitates easy integration of our generative modelling tool into existing workflows and applications, accelerating the process of molecular discovery and design.
 
