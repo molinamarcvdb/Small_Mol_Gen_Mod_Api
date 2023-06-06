@@ -10,7 +10,7 @@ The generative model employed here wasd eveloped in [2] and is available through
 Recognizing the challenge in comparing and ranking different generative models, we externally validated the large language model with the Molecular Sets (MOSES) benchmarking platform developed in [3]. MOSES provides training and testing datasets, along with a comprehensive set of metrics to evaluate the quality and diversity of generated structures. 
 
 The API facilitates easy integration of our generative modelling tool into existing workflows and applications, accelerating the process of molecular discovery and design.
-## Usage
+## API Usage
 
 1. Clone repository
 ```
