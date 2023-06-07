@@ -7,7 +7,7 @@ The exploration and generation of novel molecular structures is a critical aspec
 
 The generative model employed here wasd eveloped in [2] and is available through the HuggingFace infrastructure. The authors developed a Molecular language model as a multi task generator and is capable of producing molecular structures with properties similar to those of the given hit. Then, the propertie predictor model is capable of predicting several improtant properties of each generated molecule (Model and dataset in Google Drive Link)
 
-![Image description](pIPLINE.png)
+![Image description](pIPELINE.png)
 
 
 Recognizing the challenge in comparing and ranking different generative models, we externally validated the large language model with the Molecular Sets (MOSES) benchmarking platform developed in [3]. MOSES provides training and testing datasets, along with a comprehensive set of metrics to evaluate the quality and diversity of generated structures. 
