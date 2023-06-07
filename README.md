@@ -1,6 +1,6 @@
 # Hit_Expansion_Generative_Modelling
 
-This repository contains the source code for our Small Molecule Targeted Generative Modelling API, a project for Artificial Intelligence in Drug Discovery, a module from the Medical Informatics MSc at fachhochschule nordwestschweiz (FHNW), Muttenz, Switzerland. Our tool consist on a user-friendly interface for hit expansion that given a initial hit the suer can expand its hit with similar compound with varied properties.
+This repository contains the source code for our Small Molecule Targeted Generative Modelling API, a project for Artificial Intelligence in Drug Discovery, a module from the Medical Informatics MSc at fachhochschule nordwestschweiz (FHNW), Muttenz, Switzerland. Our tool consist on a user-friendly interface for hit expansion that given a initial hit the user can expand its hit with similar compound with varied properties.
 
 ## Introduction
 The exploration and generation of novel molecular structures is a critical aspect of drug discovery and related fields. Traditional methods can be time-consuming and expensive, making the use of computational models increasingly attractive. Our API utilizes a generative model approach, learning from a large dataset of molecular structures expressed in the SELFIES language - a 100% robust molecular string representation developed in [1].
@@ -22,7 +22,7 @@ python -m pip install -r requirements.txt
 ```
 3. Download molecule properties prediction model available at the link and add it to the project directory. Link: [https://drive.google.com/file/d/1d_c_jOZzhrnhEHDYTg1VU6UvHpa4vbB4/view?usp=sharing](https://drive.google.com/drive/folders/1c70OuDjbLj87ohl9ue1isBbXl-dQzExH?usp=sharing)
 
-4. Run the web application locally. Open window local servet at port 5555
+4. Run the web application locally. Open window local server at port 5555
 ```
 python webapp.py
 ```
