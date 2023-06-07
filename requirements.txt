@@ -1,0 +1,11 @@
+numpy
+pandas
+joblib
+rdkit
+tqdm
+transformers
+flask
+selfies
+cython
+pomegranate
+molsets
